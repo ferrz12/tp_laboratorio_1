@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1535919249 source:c:\users\fernando\desktop\material\tp_laboratorio_1\trabajopractico1\main.c
+	<stdio.h>
+	<stdlib.h>
+
