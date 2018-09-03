@@ -19,7 +19,8 @@ int main()
     int resta;
     int multiplicacion;
     float division;
-    int factoreo;
+    int factoreoNumeroUno;
+    int factoreoNumeroDos;
 
     do{ //menu de opciones
         printf("1.Sumar\n");
@@ -59,17 +60,15 @@ int main()
                 division = dividir(numeroUno, numeroDos);
                 printf("La division es: %.2f\n", division);
             }
-
             break;
         case 5:
             numeroUno = ingresarNumeroUno();
             numeroDos = ingresarNumeroDos();
-            factoreo = factorial(numeroUno);
-            printf("El factorial de numero uno es: %d\n", factoreo);
-
+            factoreoNumeroUno = factorial(numeroUno);
+            factoreoNumeroDos = factorial(numeroDos);
+            printf("El factorial de numero uno es: %d y el factorial de numero dos es: %d\n", factoreoNumeroUno, factoreoNumeroDos);
         default:
                 opcion = 6;
-
     }
 
     system("pause"); //hace una pausa en la ejecucion
@@ -80,7 +79,7 @@ int main()
     return 0;
 }
 
-int ingresarOpcion(void){
+int ingresarOpcion(void){ //funcion para ingresar opcion al menu
 
     int opcion;
 
@@ -90,7 +89,7 @@ int ingresarOpcion(void){
     return opcion;
 }
 
-int ingresarNumeroUno(void){
+int ingresarNumeroUno(void){ //funcion para ingresar primer numero
 
     int numero;
 
@@ -101,7 +100,7 @@ int ingresarNumeroUno(void){
 
 }
 
-int ingresarNumeroDos(void){
+int ingresarNumeroDos(void){ //funcion para ingresar segundo numero
 
     int numero;
 
@@ -112,7 +111,7 @@ int ingresarNumeroDos(void){
 
 }
 
-int sumar(int numeroUno, int numeroDos){
+int sumar(int numeroUno, int numeroDos){ //funcion para sumar
 
     int suma;
 
@@ -122,7 +121,7 @@ int sumar(int numeroUno, int numeroDos){
 
 }
 
-int restar(int numeroUno, int numeroDos){
+int restar(int numeroUno, int numeroDos){ //funcion para restar
 
     int resta;
 
@@ -132,7 +131,7 @@ int restar(int numeroUno, int numeroDos){
 
 }
 
-int multiplicar(int numeroUno, int numeroDos){
+int multiplicar(int numeroUno, int numeroDos){ //funcion para multiplicar
 
     int multiplicacion;
 
@@ -142,7 +141,7 @@ int multiplicar(int numeroUno, int numeroDos){
 
 }
 
-float dividir(int numeroUno, int numeroDos){
+float dividir(int numeroUno, int numeroDos){ //funcion para dividir
 
     float division;
 
@@ -152,7 +151,7 @@ float dividir(int numeroUno, int numeroDos){
 
 }
 
-int factorial(int numero){
+int factorial(int numero){ // funcion para factorial
 
     int factorial = 1;
     int i;
