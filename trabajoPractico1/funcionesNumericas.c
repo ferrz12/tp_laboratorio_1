@@ -1,3 +1,17 @@
+#include <stdio.h>
+#include "funcionesNumericas.h"
+
+int pedirEntero(char texto[]){
+
+    int numero;
+
+    printf("%s", texto);
+    scanf("%d", &numero);
+
+    return numero;
+
+}
+
 int sumar(int numeroUno, int numeroDos){ //funcion para sumar
 
     int suma;
@@ -50,3 +64,6 @@ int factorial(int numero){ // funcion para factorial
       return factorial;
 
 }
+
+
+

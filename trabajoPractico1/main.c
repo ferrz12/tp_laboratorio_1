@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "funcionesNumericas.h"
 
 int ingresarOpcion(void);
-int ingresarNumeroUno(void);
-int ingresarNumeroDos(void);
 
 int main()
 {
     int opcion;
-    int numeroUno;
-    int numeroDos;
+    int numeroUno = 0;
+    int numeroDos = 0;
     int suma;
     int resta;
     int multiplicacion;
@@ -19,9 +18,8 @@ int main()
 
     do{ //menu de opciones
 
-        printf("1. Ingresar primer operando (A=%d) \n");
-        numeroUno = ingresarNumeroUno();
-        printf("2. Ingresar segundo operando (B=) \n");
+        printf("1. Ingresar primer operando (A=%d) \n", numeroUno);
+        printf("2. Ingresar segundo operando (B=%d) \n", numeroDos);
         printf("3. Calcular todas las operaciones\n");
         printf("4. Informar resultados\n");
         printf("5. Salir\n");
@@ -30,39 +28,16 @@ int main()
 
              switch(opcion){
         case 1:
-            numeroUno = ingresarNumeroUno();
-            numeroDos = ingresarNumeroDos();
-            suma = sumar(numeroUno, numeroDos);
-            printf("La suma es: %d\n", suma);
+            numeroUno = pedirEntero("Ingrese primer operando: ");
             break;
         case 2:
-            numeroUno = ingresarNumeroUno();
-            numeroDos = ingresarNumeroDos();
-            resta = restar(numeroUno, numeroDos);
-            printf("La resta es: %d\n", resta);
+            numeroDos = pedirEntero("Ingrese segundo operando: ")
             break;
         case 3:
-            numeroUno = ingresarNumeroUno();
-            numeroDos = ingresarNumeroDos();
-            multiplicacion = multiplicar(numeroUno, numeroDos);
-            printf("La multiplicacion es: %d\n", multiplicacion);
             break;
         case 4:
-            numeroUno = ingresarNumeroUno();
-            numeroDos = ingresarNumeroDos();
-            if(numeroDos == 0){
-                printf("No se puede dividir por 0 \n");
-            }else{
-                division = dividir(numeroUno, numeroDos);
-                printf("La division es: %.2f\n", division);
-            }
             break;
         case 5:
-            numeroUno = ingresarNumeroUno();
-            numeroDos = ingresarNumeroDos();
-            factoreoNumeroUno = factorial(numeroUno);
-            factoreoNumeroDos = factorial(numeroDos);
-            printf("El factorial de numero uno es: %d y el factorial de numero dos es: %d\n", factoreoNumeroUno, factoreoNumeroDos);
         default:
                 opcion = 5;
     }
@@ -84,27 +59,7 @@ int ingresarOpcion(void){ //funcion para ingresar opcion al menu
     return opcion;
 }
 
-int ingresarNumeroUno(void){ //funcion para ingresar primer numero
 
-    int numero;
-
-    printf("Ingrese numero uno: ");
-    scanf("%d", &numero);
-
-    return numero;
-
-}
-
-int ingresarNumeroDos(void){ //funcion para ingresar segundo numero
-
-    int numero;
-
-    printf("Ingrese numero dos: ");
-    scanf("%d", &numero);
-
-    return numero;
-
-}
 
 
 

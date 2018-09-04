@@ -1,3 +1,4 @@
+int pedirEntero(char[]);
 int sumar(int, int);
 int restar(int, int);
 int multiplicar(int, int);
