@@ -12,7 +12,7 @@ int pedirEntero(char texto[]){
 
 }
 
-int sumar(int numeroUno, int numeroDos){ //funcion para sumar
+int sumar(int numeroUno, int numeroDos){
 
     int suma;
 
@@ -22,7 +22,7 @@ int sumar(int numeroUno, int numeroDos){ //funcion para sumar
 
 }
 
-int restar(int numeroUno, int numeroDos){ //funcion para restar
+int restar(int numeroUno, int numeroDos){
 
     int resta;
 
@@ -32,7 +32,7 @@ int restar(int numeroUno, int numeroDos){ //funcion para restar
 
 }
 
-int multiplicar(int numeroUno, int numeroDos){ //funcion para multiplicar
+int multiplicar(int numeroUno, int numeroDos){
 
     int multiplicacion;
 
@@ -42,7 +42,7 @@ int multiplicar(int numeroUno, int numeroDos){ //funcion para multiplicar
 
 }
 
-float dividir(int numeroUno, int numeroDos){ //funcion para dividir
+float dividir(int numeroUno, int numeroDos){
 
     float division;
 
@@ -52,14 +52,14 @@ float dividir(int numeroUno, int numeroDos){ //funcion para dividir
 
 }
 
-int factorial(int numero){ // funcion para factorial
+int factorial(int numero){
 
     int factorial = 1;
     int i;
 
-      for(i = 1; i <= numero; i++){
-        factorial = factorial * i;
-      }
+       for(i = numero; i >= 1; i--){
+            factorial = factorial * i;
+        }
 
       return factorial;
 
