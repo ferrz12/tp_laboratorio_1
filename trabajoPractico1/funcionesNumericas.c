@@ -1,20 +1,37 @@
 #include <stdio.h>
 #include "funcionesNumericas.h"
 
-int pedirEntero(char texto[]){
+/** \brief Pide un numero al usuario con o sin mensaje y lo devuelve
+ *
+ * \param texto [] texto Recibe una cadena de caracteres en forma de un vector de char
+ * \return Retorna el valor
+ *
+ */
 
-    int numero;
+
+float pedirFloat(char texto[]){
+
+    float numero;
 
     printf("%s", texto);
-    scanf("%d", &numero);
+    scanf("%f", &numero);
 
     return numero;
 
 }
 
-int sumar(int numeroUno, int numeroDos){
+/** \brief Realiza la suma de 2 numeros recibidos
+ *
+ * \param numeroUno Primer numero
+ * \param numeroDos Segundo numero
+ * \return Devuelve el resultado de la suma de los numeros recibidos
+ *
+ */
 
-    int suma;
+
+float sumar(float numeroUno, float numeroDos){
+
+    float suma;
 
     suma = numeroUno + numeroDos;
 
@@ -22,9 +39,17 @@ int sumar(int numeroUno, int numeroDos){
 
 }
 
-int restar(int numeroUno, int numeroDos){
+/** \brief Realiza la resta de 2 numeros recibidos
+ *
+ * \param numeroUno Primer numero
+ * \param numeroDos Segundo numero
+ * \return Devuelve el resultado de la resta de los numeros recibidos
+ *
+ */
 
-    int resta;
+float restar(float numeroUno, float numeroDos){
+
+    float resta;
 
     resta = numeroUno - numeroDos;
 
@@ -32,9 +57,17 @@ int restar(int numeroUno, int numeroDos){
 
 }
 
-int multiplicar(int numeroUno, int numeroDos){
+/** \brief Realiza la multiplicacion de 2 numeros recibidos
+ *
+ * \param numeroUno Primer numero
+ * \param numeroDos Segundo numero
+ * \return Devuelve el resultado de la multiplicacion de los numeros recibidos
+ *
+ */
 
-    int multiplicacion;
+float multiplicar(float numeroUno, float numeroDos){
+
+    float multiplicacion;
 
     multiplicacion = numeroUno * numeroDos;
 
@@ -42,17 +75,32 @@ int multiplicar(int numeroUno, int numeroDos){
 
 }
 
-float dividir(int numeroUno, int numeroDos){
+/** \brief Realiza la division de 2 numeros recibidos, admite decimales
+ *
+ * \param numeroUno Primer numero
+ * \param numeroDos Segundo numero
+ * \return Devuelve el resultado de la division de los numeros recibidos
+ *
+ */
+
+float dividir(float numeroUno, float numeroDos){
 
     float division;
 
-    division = (float)numeroUno / (float)numeroDos;
+    division = numeroUno / numeroDos;
 
     return division;
 
 }
 
-int factorial(int numero){
+/** \brief Realiza el factorial del numero recibido, admite decimales
+ *
+ * \param numero Recibe un numero
+ * \return Devuelve el resultado del factorial del numero recibido
+ *
+ */
+
+int factorial(float numero){
 
     int factorial = 1;
     int i;
@@ -64,6 +112,33 @@ int factorial(int numero){
       return factorial;
 
 }
+
+/** \brief Obtiene el decimal del numero recibido
+ *
+ * \param numero Es el numero en decimal recibido
+ * \return Devuelve si el numero tiene decimal o no
+ *
+ */
+
+
+int obtenerDecimal(float numero){
+
+    int respuesta;
+    int numeroEntero;
+
+    numeroEntero = (int)numero;
+
+    if(numero - numeroEntero != 0){
+        respuesta = 1;
+    }else{
+        respuesta = 0;
+    }
+
+    return respuesta;
+
+}
+
+
 
 
 

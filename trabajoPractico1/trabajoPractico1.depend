@@ -7,13 +7,13 @@
 	<stdio.h>
 	<stdlib.h>
 
-1536179841 source:d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\funcionesnumericas.c
+1536281894 source:d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\funcionesnumericas.c
 	<stdio.h>
 	"funcionesNumericas.h"
 
-1536176759 d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\funcionesnumericas.h
+1536281912 d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\funcionesnumericas.h
 
-1536182917 source:d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\main.c
+1536281946 source:d:\utn\primer cuatrimestre\programacion i\tp_laboratorio_1\trabajopractico1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funcionesNumericas.h"
