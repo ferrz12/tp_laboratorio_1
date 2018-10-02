@@ -187,26 +187,42 @@ void eEmpleado_ingresarEmpleado(eEmpleado listado[], int limite){
 int eEmpleado_modificacion(eEmpleado listado[] , int limite)
 {
     int idEmpleado;
-    int indice;
-    char auxChar[TAMANIO];
-    char auxCharNombre[TAMANIO];
     int i;
+    int opcion;
 
     printf("Ingrese id de empleado: \n");
     scanf("%d", &idEmpleado);
 
-    indice = eEmpleado_buscarPorId(listado, limite, idEmpleado);
+    for(i = 0; i < limite; i++){
+        if(idEmpleado == listado[i].idEmpleado){
+            printf("Id encontrado, que desea modificar?\n");
+            printf("1. Nombre");
+            printf("2.Apellido");
+            printf("3.Salario");
+            printf("4.Sector\n");
 
-    if(indice != -1){
-        printf("Id encontrado\n");
+            opcion = getInt("Ingrese opcion");
 
+            switch(opcion){
+                case 1:
+                        printf("Ingrese nuevo nombre: ");
+                        fflush(stdin);
+                        gets(listado[i].nombre);
+                        break;
+                case 2:
+                case 3:
+                case 4:
+                default:
+                    printf("Ingrese una opcion valida a modificar!");
+                    break;
+            }
+
+
+        }
 
     }
-
-
-
-
 }
+
 
 
 
