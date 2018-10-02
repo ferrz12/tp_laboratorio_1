@@ -23,6 +23,7 @@ do{
         eEmpleado_alta(listadoDeEmpleados, CANTIDAD);
         break;
     case 2:
+        eEmpleado_modificacion(listadoDeEmpleados, CANTIDAD);
     case 3:
     case 4:
         eEmpleado_mostrarListado(listadoDeEmpleados, CANTIDAD);

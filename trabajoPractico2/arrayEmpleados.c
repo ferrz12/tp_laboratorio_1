@@ -151,7 +151,7 @@ void eEmpleado_ingresarEmpleado(eEmpleado listado[], int limite){
 
     int id;
     int indice;
-    int salario;
+    float salario;
     int sector;
 
     indice = eEmpleado_buscarLugarLibre(listado,limite);
@@ -183,5 +183,31 @@ void eEmpleado_ingresarEmpleado(eEmpleado listado[], int limite){
     }
 
 }
+
+int eEmpleado_modificacion(eEmpleado listado[] , int limite)
+{
+    int idEmpleado;
+    int indice;
+    char auxChar[TAMANIO];
+    char auxCharNombre[TAMANIO];
+    int i;
+
+    printf("Ingrese id de empleado: \n");
+    scanf("%d", &idEmpleado);
+
+    indice = eEmpleado_buscarPorId(listado, limite, idEmpleado);
+
+    if(indice != -1){
+        printf("Id encontrado\n");
+
+
+    }
+
+
+
+
+}
+
+
 
 
