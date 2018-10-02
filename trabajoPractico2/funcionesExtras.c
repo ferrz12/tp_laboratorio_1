@@ -13,6 +13,8 @@ int menuOpciones(){
 
     opcion = getInt("Ingrese opcion: \n");
 
+    system("cls"); //limpio la pantalla despues de seleccionar opcion cada opcion
+
     return opcion;
 
 }

@@ -29,5 +29,6 @@ int eEmpleado_mostrarListadoConBorrados(eEmpleado[] ,int limite);
 int eEmpleado_alta(eEmpleado[] ,int limite);
 int eEmpleado_baja(eEmpleado[] ,int limite, int id);
 int eEmpleado_modificacion(eEmpleado[] ,int limite, int id);
+void eEmpleado_ingresarEmpleado(eEmpleado[], int);
 
 int eEmpleado_ordenar(eEmpleado[] ,int limite, int orden);

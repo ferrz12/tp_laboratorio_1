@@ -48,11 +48,10 @@ int eEmpleado_siguienteId(eEmpleado listado[],int limite)
         {
             if(listado[i].estaVacio == OCUPADO)
             {
-                    if(listado[i].idEmpleado>retorno)
+                    if(listado[i].idEmpleado  > retorno)
                     {
-                         retorno=listado[i].idEmpleado;
+                         retorno = listado[i].idEmpleado;
                     }
-
             }
         }
     }
@@ -84,7 +83,7 @@ int eEmpleado_buscarPorId(eEmpleado listado[] ,int limite, int id)
 
 void eEmpleado_mostrarUno(eEmpleado unEmpleado)
 {
-     printf("Id: %d | Nombre: %s | Apellido: - %s | Salario: %.2f | Sector: %d | Esta vacio: %d  \n", unEmpleado.idEmpleado, unEmpleado.nombre, unEmpleado.apellido, unEmpleado.salario, unEmpleado.sector, unEmpleado.estaVacio);
+     printf("Id: %d | Nombre: %s | Apellido: - %s | Salario: %.2f | Sector: %d \n", unEmpleado.idEmpleado, unEmpleado.nombre, unEmpleado.apellido, unEmpleado.salario, unEmpleado.sector);
 
 }
 
@@ -92,18 +91,18 @@ int eEmpleado_mostrarListado(eEmpleado listado[],int limite)
 {
     int retorno = -1;
     int i;
-    if(limite > 0 && listado != NULL)
-    {
+
         retorno = 0;
         for(i=0; i<limite; i++)
         {
-            if(listado[i].estaVacio==OCUPADO)
+            if(listado[i].estaVacio == OCUPADO)
             {
-
                 eEmpleado_mostrarUno(listado[i]);
             }
         }
-    }
+    system("pause");
+    system("cls");
+
     return retorno;
 }
 
@@ -133,27 +132,56 @@ int eEmpleado_mostrarListadoConBorrados(eEmpleado listado[],int limite)
 int eEmpleado_alta(eEmpleado  listado[],int limite)
 {
     int retorno = -1;
-    char nombre[TAMANIO];
-    int id;
-    int indice;
-
-    if(limite > 0 && listado != NULL)
-    {
-        retorno = -2;
-        indice = eEmpleado_buscarLugarLibre(listado,limite);
-        if(indice >= 0)
-        {
-            retorno = -3;
-            id = eEmpleado_siguienteId(listado,limite);
+    int i;
 
             //if(!getValidString("Nombre?","Error","Overflow", nombre,50,2))
             //{
-                retorno = 0;
-                strcpy(listado[indice].nombre,"juan ");
-                listado[indice].idEmpleado = id;
-                listado[indice].estaVacio = OCUPADO;
+
             //}
+
+    for(i = 0; i < limite; i++){
+        eEmpleado_ingresarEmpleado(listado, limite);
+        retorno = 0;
+
         }
-    }
     return retorno;
 }
+
+void eEmpleado_ingresarEmpleado(eEmpleado listado[], int limite){
+
+    int id;
+    int indice;
+    int salario;
+    int sector;
+
+    indice = eEmpleado_buscarLugarLibre(listado,limite);
+
+    if(indice >= 0){
+
+        id = eEmpleado_siguienteId(listado,limite);
+
+        listado[indice].idEmpleado = id;
+
+        printf("Ingrese nombre: ");
+        fflush(stdin);
+        gets(listado[indice].nombre);
+
+        printf("Ingrese apellido: ");
+        fflush(stdin);
+        gets(listado[indice].apellido);
+
+        printf("Ingrese salario: ");
+        scanf("%f", &salario);
+
+        printf("Ingrese sector: ");
+        scanf("%d", &sector);
+
+        listado[indice].estaVacio = OCUPADO;
+
+        system("cls");
+
+    }
+
+}
+
+

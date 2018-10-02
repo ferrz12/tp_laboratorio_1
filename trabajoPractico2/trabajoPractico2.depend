@@ -31,3 +31,22 @@
 
 1538448613 c:\users\fernando\desktop\abmgenerico\trabajopractico2\funcionesextras.h
 
+1538453088 source:c:\users\fernando\desktop\tps\tp_laboratorio_1\trabajopractico2\funcionesextras.c
+	"funcionesExtras.h"
+
+1538448613 c:\users\fernando\desktop\tps\tp_laboratorio_1\trabajopractico2\funcionesextras.h
+
+1538454447 source:c:\users\fernando\desktop\tps\tp_laboratorio_1\trabajopractico2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arrayEmpleados.h"
+	"funcionesExtras.h"
+
+1538453409 c:\users\fernando\desktop\tps\tp_laboratorio_1\trabajopractico2\arrayempleados.h
+
+1538454329 source:c:\users\fernando\desktop\tps\tp_laboratorio_1\trabajopractico2\arrayempleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arrayEmpleados.h"
+
