@@ -5,7 +5,7 @@ int menuOpciones(){
     int opcion;
 
     printf("/--- Menu de opciones ---/\n");
-    printf("1. Dar de alta empleados\n");
+    printf("1. Dar de alta empleado\n");
     printf("2. Modificar empleado por id\n");
     printf("3. Dar de baja empleado por id\n");
     printf("4. Informar\n");
